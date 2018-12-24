@@ -21,15 +21,6 @@ If you're wanting to know how to link your roblox account to your Discord accoun
 
 `6)` You've successfully verified your roblox account
 
-# EULA
-Please see [here](https://xcore-roblox.tk/eula) for more information.
-
-# Terms of Service
-Please see [here](https://xcore-roblox.tk/terms) for more information.
-
-# Privacy Policy
-Please see [here](https://xcore-roblox.tk/privacy) for more information.
-
 # Sharing of Code
 Whilst we share the code of xCore for you to all use, we give you these simple rules;
 - `1)` That it is not a public running instance.
