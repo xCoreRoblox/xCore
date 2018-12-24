@@ -1,0 +1,39 @@
+{
+  "name": "xcore",
+  "version": "1.0.0",
+  "description": "xCore is a seamless, utility and verification system bot for Discord.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xCoreRoblox/xCore.git"
+  },
+  "author": "Monika",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xCoreRoblox/xCore/issues"
+  },
+  "homepage": "https://github.com/xCoreRoblox/xCore#readme",
+  "dependencies": {
+    "beautify": "0.0.8",
+    "chalk": "^2.4.1",
+    "discord.js": "^11.4.2",
+    "enmap": "^4.5.0",
+    "eris": "^0.9.0",
+    "lavalink": "^2.3.1",
+    "math-js": "^1.0.1",
+    "moment": "^2.23.0",
+    "moment-duration-format": "^2.2.2",
+    "ms": "^2.1.1",
+    "path": "^0.12.7",
+    "roblox-js": "^4.0.4",
+    "util": "^0.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.0",
+    "http": "0.0.0",
+    "ws": "^6.1.2"
+  }
+}
