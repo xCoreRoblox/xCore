@@ -10,10 +10,15 @@ xCore is a seamless, utility and verification system bot for Discord.
 If you're wanting to know how to link your roblox account to your Discord account, follow the simple steps below.
 
 `1)` Go to the channel named `#verify`
+
 `2)` Type in `!verify`
+
 `3)` Copy the verification code
+
 `4)` Input the code in your roblox status or blurb
+
 `5)` Type in `done` in chat
+
 `6)` You've successfully verified your roblox account
 
 # EULA
