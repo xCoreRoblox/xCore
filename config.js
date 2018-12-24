@@ -1,10 +1,71 @@
-module.exports = {
-    token: "YourBotTokenHere",
-    prefix: "!",
-    owner: "YourUserIDHere",
-    games: {
-        default: `${prefix}help | In Development`,
-        sell: `${prefix}help | 50% Off Premium`
+const config = {
+    "ownerID": "YourUserIDHere",
+    "admins": [],
+    "support": [],
+  
+    "token": "YourBotTokenHere",
+    
+    "defaultSettings" : {
+      "prefix": "!",
+      "modLogChannel": "mod-log",
+      "modRole": "Moderator",
+      "adminRole": "Administrator",
+      "systemNotice": "true",
+      "welcomeChannel": "welcome",
+      "welcomeMessage": "Let's all welcome {{user}} to the server.",
+      "welcomeEnabled": "false"
     },
-    invite: "https://discordapp.com/api/oauth2/authorize?client_id=525466950655279137&permissions=1068887494&redirect_uri=https%3A%2F%2Fxcore-roblox.tk%2Fthanks&response_type=code&scope=bot%20guilds.join"
-};
+  
+    permLevels: [
+      { level: 0,
+        name: "User", 
+        check: () => true
+      },
+  
+      { level: 2,
+        name: "Moderator",
+        check: (message) => {
+          try {
+            const modRole = message.guild.roles.find(r => r.name.toLowerCase() === message.settings.modRole.toLowerCase());
+            if (modRole && message.member.roles.has(modRole.id)) return true;
+          } catch (e) {
+            return false;
+          }
+        }
+      },
+  
+      { level: 3,
+        name: "Administrator", 
+        check: (message) => {
+          try {
+            const adminRole = message.guild.roles.find(r => r.name.toLowerCase() === message.settings.adminRole.toLowerCase());
+            return (adminRole && message.member.roles.has(adminRole.id));
+          } catch (e) {
+            return false;
+          }
+        }
+      },
+
+      { level: 4,
+        name: "Server Owner", 
+        check: (message) => message.channel.type === "text" ? (message.guild.ownerID === message.author.id ? true : false) : false
+      },
+  
+      { level: 8,
+        name: "Bot Support",
+        check: (message) => config.support.includes(message.author.id)
+      },
+  
+      { level: 9,
+        name: "Bot Admin",
+        check: (message) => config.admins.includes(message.author.id)
+      },
+  
+      { level: 10,
+        name: "Bot Owner", 
+        check: (message) => message.client.config.ownerID === message.author.id
+      }
+    ]
+  };
+  
+  module.exports = config;
