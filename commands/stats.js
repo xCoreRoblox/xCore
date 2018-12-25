@@ -1,4 +1,5 @@
 const instance = require("./package.json");
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args, level) => {
     const embed = new Discord.RichEmbed()
