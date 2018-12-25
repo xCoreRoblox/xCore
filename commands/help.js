@@ -1,3 +1,5 @@
+const Discord = require("discord.js");
+
 exports.run = async (client, message, args, level) => {
     if (!args[0]) {
         const myCommands = message.guild ? client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level) : client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level &&  cmd.conf.guildOnly !== true);
